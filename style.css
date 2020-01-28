@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "PT Sans", sans-serif;
+  background-color: #373c56;
+}
+header {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+header h1 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 5em;
+  letter-spacing: 0.1em;
+}
+header h4 {
+  color: #fff;
+  letter-spacing: 0.25em;
+  line-height: 3em;
+}
+.firstLetter {
+  font-size: 2em;
+}
+section.bg-image {
+  background-image: url(https://cdn.pixabay.com/photo/2019/02/06/18/52/sunset-3979785_960_720.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.3);
+}
+
+/* Modal Login form */
+/* Full-width input fields */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.loginButton {
+  background-color: transparent;
+  color: white;
+  padding: 10px 17px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  position: absolute;
+  top: 0.8em;
+  right: 2em;
+  font-size: 1.1em;
+}
+
+.loginButton:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the Submit Button button */
+.submitbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #ff7315;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  right: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 300px; /* Could be more or less, depending on screen size */
+  margin-right: 2em;
+  margin-top: 1em;
+  border-radius: 20px 20px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Change styles for span and Submit button on extra small screens */
+@media screen and (max-width: 600px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .submitbtn {
+    width: 100%;
+  }
+  .modal-content {
+    width: 22em;
+  }
+}
+/* Menu */
+
+#menu {
+  width: 35px;
+  height: 30px;
+  margin: 30px 0 20px 20px;
+  cursor: pointer;
+}
+.bar {
+  height: 5px;
+  width: 100%;
+  background-color: #fff;
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+#bar1 {
+  transform: translateY(-4px);
+}
+#bar3 {
+  transform: translateY(4px);
+}
+.nav li a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav li a:hover {
+  font-weight: bold;
+}
+.nav li {
+  list-style: none;
+  padding: 16px 0;
+}
+.nav {
+  padding: 0;
+  margin: 0 20px;
+  transition: 0.3s ease;
+  display: none;
+}
+.menu-bg,
+#menu-bar {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+.menu-bg {
+  z-index: 1;
+  width: 0;
+  height: 0;
+  margin: 30px 0 20px 20px;
+  background: radial-gradient(circle, #ff512f, #f09819);
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+#menu-bar {
+  z-index: 2;
+}
+.change-bg {
+  width: 550px;
+  height: 540px;
+  transform: translate(-60%, -30%);
+}
+.change .bar {
+  background-color: white;
+}
+.change #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+.change #bar3 {
+  transform: translateY(-6px) rotate(45deg);
+}
+.change #bar2 {
+  opacity: 0;
+}
+.change {
+  display: block;
+}
