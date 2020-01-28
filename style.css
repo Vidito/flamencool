@@ -168,7 +168,9 @@ span.psw {
     width: 100%;
   }
   .modal-content {
-    width: 22em;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /* Menu */
