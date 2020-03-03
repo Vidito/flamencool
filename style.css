@@ -1,6 +1,36 @@
+/* I have experimented with CSS Grid and its template areas as well as other ways of setting the grids */
+
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400");
+/* General styles*/
+
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  border-radius: 0.25rem;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+/* Header */
+
+hr {
+  width: 30%;
 }
 
 header {
@@ -72,9 +102,16 @@ input[type="password"] {
 /* Extra styles for the Submit Button button */
 .submitbtn {
   width: auto;
+  border-radius: 20%;
+  border-color: #f53803;
   padding: 10px 18px;
-  background-color: #f5d020;
+  color: #fff;
+  font-weight: bold;
   background-image: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
+}
+.submitbtn:hover {
+  color: black;
+  cursor: pointer;
 }
 
 /* Center the image and position the close button */
@@ -87,6 +124,7 @@ input[type="password"] {
 img.avatar {
   width: 20%;
   border-radius: 50%;
+  padding-top: 1rem;
 }
 
 .container {
@@ -345,46 +383,9 @@ img {
   color: var(--light);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Playfair Display", serif;
-}
-
-p,
-a {
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-/* Generic styles */
-html {
-  scroll-behavior: smooth;
-}
-ul {
-  list-style: none;
-}
 section ul li a {
   background-color: #f5d020;
   background-image: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
-}
-a {
-  text-decoration: none;
-  color: white;
-  border-radius: 0.25rem;
-  text-align: center;
-  display: inline-block;
-  transition: all 0.3s;
-}
-
-a:hover {
-  opacity: 0.6;
-}
-
-hr {
-  width: 30%;
 }
 /* Styles for the hero image */
 .hero {
@@ -522,8 +523,35 @@ hr {
 /* footer */
 footer {
   background-color: #333;
-  padding: 0.75rem;
   color: white;
   text-align: center;
   font-size: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));
+  padding: 3rem 1rem;
+}
+@media only screen and (max-width: 800px) {
+  footer {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 2fr));
+  }
+  iframe {
+    grid-column: 1/4;
+  }
+  footer p {
+    grid-column: 2/4;
+  }
+}
+footer ul li a {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+footer p {
+  font-size: 1rem;
+  text-align: right;
+}
+
+/* google map */
+iframe {
+  width: 100%;
+  height: 200;
 }
