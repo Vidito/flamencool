@@ -12,53 +12,76 @@
     <title>Flamencool</title>
   </head>
   <body>
-    
     <section class="bg-image"></section>
-    <div id="menu-bar">
-		<div id="menu" onclick="onClickMenu()">
-			<div id="bar1" class="bar"></div>
-			<div id="bar2" class="bar"></div>
-			<div id="bar3" class="bar"></div>
-		</div>
-		<ul class="nav" id="nav">
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Blog</a></li>
-			<li><a href="#">Gallery</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>
-	</div>
-	<div class="menu-bg" id="menu-bg"></div>
-</section>
+    <div>
+      <div id="menu-bar">
+        <div id="menu" onclick="onClickMenu()">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+        <ul class="nav" id="nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#abouttext">About</a></li>
+          <li><a href="#teachers">Our Teachers</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="menu-bg" id="menu-bg"></div>
+    </div>
     <!-- Modal login form -->
-    <button class="loginButton" onclick="document.getElementById('id01').style.display='block'" >Login</button>
+    <button
+      class="loginButton"
+      onclick="document.getElementById('id01').style.display='block'"
+    >
+      Login
+    </button>
 
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="https://cdn.pixabay.com/photo/2019/06/10/16/47/flamenco-4264748_960_720.png" alt="Avatar" class="avatar">
+    <div id="id01" class="modal">
+      <form
+        class="modal-content animate"
+        action="/action_page.php"
+        method="post"
+      >
+        <div class="imgcontainer">
+          <span
+            onclick="document.getElementById('id01').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;</span
+          >
+          <img
+            src="https://cdn.pixabay.com/photo/2019/06/10/16/47/flamenco-4264748_960_720.png"
+            alt="Avatar"
+            class="avatar"
+          />
+        </div>
+
+        <div class="container">
+          <label><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" required />
+
+          <label><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" required />
+
+          <label>
+            <input type="checkbox" checked="checked" /> Remember me
+          </label>
+        </div>
+
+        <div class="container">
+          <button
+            type="button"
+            onclick="document.getElementById('id01').style.display='none'"
+            class="submitbtn"
+          >
+            Log in
+          </button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
     </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" >
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="submitbtn">Log in</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
 
     <!-- Header-->
 
@@ -70,10 +93,9 @@
       <br />
       <hr />
       <h1>Welcome to Flamencool</h1>
-      <i class="fas fa-angle-double-down fa-3x"></i>
     </header>
     <main class="wrapper">
-      <section class="breweries" id="breweries">
+      <section class="teachers">
         <ul>
           <li>
             <figure class="figure1">
@@ -81,25 +103,29 @@
               <img
                 src="https://cdn.pixabay.com/photo/2019/03/03/07/03/sunset-4031253_960_720.jpg"
                 alt="Several hands holding beer glasses"
-              /> 
+              />
               <figcaption><h3>Flamencool</h3></figcaption>
             </figure>
-           
           </li>
-         
-          <li class="abouttext">
+
+          <li class="abouttext" id="abouttext">
             <h1>About us</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum cumque doloremque excepturi totam nemo deserunt laboriosam eveniet facilis aliquam iusto similique mollitia iure ea illo quis ut non tenetur repellendus debitis voluptatibus, explicabo quibusdam eaque modi quidem! Deserunt, quidem. Aliquid facilis nostrum nulla voluptatem cumque voluptatibus corrupti vitae debitis repudiandae.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
+              cumque doloremque excepturi totam nemo deserunt laboriosam eveniet
+              facilis aliquam iusto similique mollitia iure ea illo quis ut non
+              tenetur repellendus debitis voluptatibus, explicabo quibusdam
+              eaque modi quidem! Deserunt, quidem. Aliquid facilis nostrum nulla
+              voluptatem cumque voluptatibus corrupti vitae debitis repudiandae.
             </p>
             <a href="#">Book a lesson</a>
           </li>
         </ul>
       </section>
     </main>
-    <!-- Boxes Section -->
-    <section class="boxes">
-      <div class="box">
+    <!-- awesome Section -->
+    <section class="awesomefont">
+      <div class="awesome">
         <i class="fas fa-heart fa-4x"></i>
         <h3>Passion</h3>
         <p>
@@ -107,7 +133,7 @@
           expedita?
         </p>
       </div>
-      <div class="box">
+      <div class="awesome">
         <i class="fas fa-guitar fa-4x"></i>
         <h3>Polish your soul</h3>
         <p>
@@ -115,7 +141,7 @@
           expedita?
         </p>
       </div>
-      <div class="box">
+      <div class="awesome">
         <i class="fas fa-users fa-4x"></i>
         <h3>Community</h3>
         <p>
@@ -125,9 +151,8 @@
       </div>
     </section>
 
-        
     <main class="wrapper">
-      <section class="breweries" id="breweries">
+      <section class="teachers" id="teachers">
         <ul>
           <li>
             <figure>
@@ -139,7 +164,10 @@
               <figcaption><h3>Our Guitar Teacher</h3></figcaption>
             </figure>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam laudantium error nemo accusamus officiis asperiores hic vero tenetur voluptate, perspiciatis, optio esse, dolore quo ex!
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Laudantium corporis ducimus repellendus ex aliquid voluptatibus
+              eligendi veritatis architecto beatae quisquam, eum ipsa suscipit
+              optio in.
             </p>
             <a href="#">More about Guitar lessons</a>
           </li>
@@ -153,13 +181,15 @@
               <figcaption><h3>Our Dance Teacher</h3></figcaption>
             </figure>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium corporis ducimus repellendus ex aliquid voluptatibus eligendi veritatis architecto beatae quisquam, eum ipsa suscipit optio in.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Laudantium corporis ducimus repellendus ex aliquid voluptatibus
+              eligendi veritatis architecto beatae quisquam, eum ipsa suscipit
+              optio in.
             </p>
             <a href="#">More about Dance lessons</a>
           </li>
           <li>
             <figure>
-              <!-- Photo by Rawpixel on Unsplash -->
               <img
                 src="https://cdn.pixabay.com/photo/2015/03/17/20/36/musicians-678233_960_720.jpg"
                 alt="Three different glasses of beer"
@@ -167,13 +197,65 @@
               <figcaption><h3>Our Singing Teacher</h3></figcaption>
             </figure>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptatibus tempora ipsam omnis quaerat odit adipisci optio! Sunt rerum vitae architecto esse? Repudiandae, animi et?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              voluptatibus tempora ipsam omnis quaerat odit adipisci optio! Sunt
+              rerum vitae architecto esse? Repudiandae, animi et?
             </p>
             <a href="#">More about Singing lessons</a>
           </li>
         </ul>
       </section>
     </main>
+
+    <div class="gallerycontainer">
+      <h1>Gallery</h1>
+      <br />
+      <div class="gallery">
+        <figure class="gallery__item gallery__item--1">
+          <img
+            src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            alt="Gallery image 1"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+          <img
+            src="https://images.unsplash.com/photo-1464375117522-1311d6a5b81f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            alt="Gallery image 2"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--3">
+          <img
+            src="https://images.pexels.com/photos/3365379/pexels-photo-3365379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="Gallery image 3"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+          <img
+            src="https://images.unsplash.com/photo-1542401520-180a59daad21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            alt="Gallery image 4"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+          <img
+            src="https://images.unsplash.com/photo-1533854257392-71c5ff28dff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            alt="Gallery image 5"
+            class="gallery__img"
+          />
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+          <img
+            src="https://images.unsplash.com/photo-1548693996-4555624c6649?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+            alt="Gallery image 6"
+            class="gallery__img"
+          />
+        </figure>
+      </div>
+    </div>
+
     <footer>
       <ul>
         <li><a href="#">Book a lesson</a></li>
@@ -181,16 +263,27 @@
         <li><a href="#">Shop</a></li>
       </ul>
       <ul>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">Advertise</a></li>
-        <li><a href="#">Donate</a></li>
+        <li>
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </li>
       </ul>
-      <ul>
-        <li><a href="#">Contact us</a></li>
-        <li><a href="#">Advertise</a></li>
-        <li><a href="#">Donate</a></li>
-      </ul>
-      <iframe src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=arnhem%20centraal+(Flamencool)&amp;ie=UTF8&amp;t=&amp;z=22&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/coordinates.html">Our Flamenco school</a></iframe><br />
+      <div class="contact">
+        <i class="fas fa-map-marker-alt"> - 1, LoremStraat, Arnhem</i>
+        <i class="fas fa-phone-square-alt">--012345678</i>
+      </div>
+
+      <a
+        class="googleMap"
+        href="https://www.google.com/maps/place/Arnhem+Centraal/@51.9855681,5.8968993,17z/data=!3m1!4b1!4m5!3m4!1s0x47c7a5b736f9ea8b:0x391e264ca4719c91!8m2!3d51.9855681!4d5.899088"
+        target="_blank"
+        ><img src="map.jpg" alt=""
+      /></a>
       <p>&copy; 2020 Vahid Niamadpour</p>
     </footer>
 
