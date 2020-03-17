@@ -1,4 +1,4 @@
-function onClickMenu() {
+function ClickMenu() {
   document.getElementById("menu").classList.toggle("change");
   document.getElementById("nav").classList.toggle("change");
 
@@ -6,9 +6,9 @@ function onClickMenu() {
 }
 
 // Get the modal
-var modal = document.getElementById("id01");
+var modal = document.getElementById("modal");
 
-// When the user clicks anywhere outside of the modal, close it
+// close the model if there is a click outside
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
