@@ -15,7 +15,7 @@
     <section class="bg-image"></section>
     <div>
       <div id="menu-bar">
-        <div id="menu" onclick="onClickMenu()">
+        <div id="menu" onclick="ClickMenu()">
           <div id="bar1" class="bar"></div>
           <div id="bar2" class="bar"></div>
           <div id="bar3" class="bar"></div>
@@ -24,8 +24,8 @@
           <li><a href="#">Home</a></li>
           <li><a href="#abouttext">About</a></li>
           <li><a href="#teachers">Our Teachers</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
         </ul>
       </div>
       <div class="menu-bg" id="menu-bg"></div>
@@ -33,22 +33,18 @@
     <!-- Modal login form -->
     <button
       class="loginButton"
-      onclick="document.getElementById('id01').style.display='block'"
+      onclick="document.getElementById('modal').style.display='block'"
     >
       Login
     </button>
 
-    <div id="id01" class="modal">
-      <form
-        class="modal-content animate"
-        action="/action_page.php"
-        method="post"
-      >
+    <div id="modal" class="modal">
+      <form class="modal-content animate">
         <div class="imgcontainer">
           <span
-            onclick="document.getElementById('id01').style.display='none'"
+            onclick="document.getElementById('modal').style.display='none'"
             class="close"
-            title="Close Modal"
+            title="Close"
             >&times;</span
           >
           <img
@@ -60,10 +56,10 @@
 
         <div class="container">
           <label><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" required />
+          <input type="text" placeholder="Enter Your Username" />
 
           <label><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" required />
+          <input type="password" placeholder="Enter Your Password" />
 
           <label>
             <input type="checkbox" checked="checked" /> Remember me
@@ -73,12 +69,12 @@
         <div class="container">
           <button
             type="button"
-            onclick="document.getElementById('id01').style.display='none'"
-            class="submitbtn"
+            onclick="document.getElementById('modal').style.display='none'"
+            class="submitbutton"
           >
             Log in
           </button>
-          <span class="psw">Forgot <a href="#">password?</a></span>
+          <span class="password">Forgot <a href="#">password?</a></span>
         </div>
       </form>
     </div>
@@ -94,12 +90,14 @@
       <hr />
       <h1>Welcome to Flamencool</h1>
     </header>
-    <main class="wrapper">
-      <section class="teachers">
+
+    <!-- About us -->
+
+    <section class="wrapper">
+      <div class="teachers">
         <ul>
           <li>
             <figure class="figure1">
-              <!-- Photo by Quentin Dr on Unsplash -->
               <img
                 src="https://cdn.pixabay.com/photo/2019/03/03/07/03/sunset-4031253_960_720.jpg"
                 alt="Several hands holding beer glasses"
@@ -121,9 +119,11 @@
             <a href="#">Book a lesson</a>
           </li>
         </ul>
-      </section>
-    </main>
-    <!-- awesome Section -->
+      </div>
+    </section>
+
+    <!-- font awesome Section -->
+
     <section class="awesomefont">
       <div class="awesome">
         <i class="fas fa-heart fa-4x"></i>
@@ -151,12 +151,13 @@
       </div>
     </section>
 
-    <main class="wrapper">
-      <section class="teachers" id="teachers">
+    <!-- About our teachers -->
+
+    <section class="wrapper">
+      <div class="teachers" id="teachers">
         <ul>
           <li>
             <figure>
-              <!-- Photo by Quentin Dr on Unsplash -->
               <img
                 src="https://cdn.pixabay.com/photo/2014/03/01/20/28/flamenco-277783_960_720.jpg"
                 alt="Several hands holding beer glasses"
@@ -173,7 +174,6 @@
           </li>
           <li>
             <figure>
-              <!-- Photo by Drew Farwell on Unsplash -->
               <img
                 src="https://cdn.pixabay.com/photo/2018/07/12/14/01/dance-3533494_960_720.jpg"
                 alt="Several friends doing a toast"
@@ -204,57 +204,142 @@
             <a href="#">More about Singing lessons</a>
           </li>
         </ul>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <div class="gallerycontainer">
+    <!--  Testimonial Slides-->
+
+    <section id="testimonials">
+      <h1>What our students say about us:</h1>
+      <div class="talk">
+        <div class="cards">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1583324217880-5f4d23550f94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+              alt="Avatar"
+            />
+            <div class="cardcontainer">
+              <h4><b>Parisa Bakhtiari</b></h4>
+              <br />
+              <p>⭐⭐⭐⭐⭐</p>
+              <br />
+
+              <h3>
+                "I love dancing and now I have found what I would love to do in
+                the future!"
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1584308972272-9e4e7685e80f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+              alt="Laura's photo"
+            />
+
+            <div class="cardcontainer">
+              <h4><b>Laura Lanseros</b></h4>
+              <br />
+              <p>⭐⭐⭐⭐⭐</p>
+              <br />
+
+              <h3>"I have loved the experience and 100% recommend it"</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1562124638-724e13052daf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+              alt="Avatar"
+            />
+            <div class="cardcontainer">
+              <h4><b>Dariush Pouya</b></h4>
+              <br />
+              <p>⭐⭐⭐⭐⭐</p>
+              <br />
+
+              <h3>"Unique is the word to describe Flamencool"</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1583324217880-5f4d23550f94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+              alt="Avatar"
+            />
+            <div class="cardcontainer">
+              <h4><b>Parisa Bakhtiari</b></h4>
+              <br />
+              <p>⭐⭐⭐⭐⭐</p>
+              <br />
+
+              <h3>
+                "I love dancing and now I have found what I would love to do in
+                the future!"
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+
+    <section class="gallerycontainer" id="gallery">
       <h1>Gallery</h1>
       <br />
       <div class="gallery">
-        <figure class="gallery__item gallery__item--1">
+        <figure class="galleryitem galleryitem1">
           <img
             src="https://images.unsplash.com/photo-1525201548942-d8732f6617a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            alt="Gallery image 1"
-            class="gallery__img"
+            alt="famenco photo"
+            class="galleryimg"
           />
         </figure>
-        <figure class="gallery__item gallery__item--2">
+        <figure class="galleryitem galleryitem2">
           <img
             src="https://images.unsplash.com/photo-1464375117522-1311d6a5b81f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            alt="Gallery image 2"
-            class="gallery__img"
+            alt="famenco photo"
+            class="galleryimg"
           />
         </figure>
-        <figure class="gallery__item gallery__item--3">
+        <figure class="galleryitem galleryitem3">
           <img
             src="https://images.pexels.com/photos/3365379/pexels-photo-3365379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-            alt="Gallery image 3"
-            class="gallery__img"
+            alt="famenco photo"
+            class="galleryimg"
           />
         </figure>
-        <figure class="gallery__item gallery__item--4">
+        <figure class="galleryitem galleryitem4">
           <img
             src="https://images.unsplash.com/photo-1542401520-180a59daad21?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            alt="Gallery image 4"
-            class="gallery__img"
+            alt="famenco photo"
+            class="galleryimg"
           />
         </figure>
-        <figure class="gallery__item gallery__item--5">
+        <figure class="galleryitem galleryitem5">
           <img
             src="https://images.unsplash.com/photo-1533854257392-71c5ff28dff7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            alt="Gallery image 5"
-            class="gallery__img"
+            alt="famenco photo"
+            class="galleryimg"
           />
         </figure>
-        <figure class="gallery__item gallery__item--6">
+        <figure class="galleryitem galleryitem6">
           <img
             src="https://images.unsplash.com/photo-1548693996-4555624c6649?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            alt="Gallery image 6"
-            class="gallery__img"
+            alt="famenco photo"
+            class="galleryimg"
           />
         </figure>
       </div>
-    </div>
+    </section>
+
+    <!-- Footer obviously :D -->
 
     <footer>
       <ul>
@@ -282,7 +367,9 @@
         class="googleMap"
         href="https://www.google.com/maps/place/Arnhem+Centraal/@51.9855681,5.8968993,17z/data=!3m1!4b1!4m5!3m4!1s0x47c7a5b736f9ea8b:0x391e264ca4719c91!8m2!3d51.9855681!4d5.899088"
         target="_blank"
-        ><img src="map.jpg" alt=""
+        ><img
+          src="https://images.pexels.com/photos/1468657/pexels-photo-1468657.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          alt=""
       /></a>
       <p>&copy; 2020 Vahid Niamadpour</p>
     </footer>
