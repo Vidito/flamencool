@@ -1,4 +1,4 @@
-/* I have experimented with CSS Grid and its template areas as well as other ways of setting the grids */
+/* I have experimented with CSS Grid  */
 
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400");
 /* General styles*/
@@ -40,17 +40,41 @@ header {
   left: 20%;
 }
 header h1 {
-  color: #fff;
+  color: white;
   font-weight: bold;
   font-size: 60px;
   letter-spacing: 1.5;
   margin: 10px;
+  position: relative;
+  animation: header1 3s forwards;
 }
+
+@keyframes header1 {
+  0% {
+    left: -1000px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
 header h4 {
-  color: #fff;
+  position: relative;
+  color: white;
   letter-spacing: 1.5;
   line-height: 2;
   font-size: 22px;
+  animation: header4 3s forwards;
+}
+@keyframes header4 {
+  0% {
+    top: -500px;
+  }
+
+  100% {
+    top: 0px;
+  }
 }
 
 .firstLetter {
@@ -67,7 +91,7 @@ section.bg-image {
 }
 
 /* Modal Login form */
-/* Full-width input fields */
+
 input[type="text"],
 input[type="password"] {
   width: 100%;
@@ -78,7 +102,6 @@ input[type="password"] {
   box-sizing: border-box;
 }
 
-/* tyle for all buttons */
 .loginButton {
   background-color: transparent;
   color: white;
@@ -97,8 +120,7 @@ input[type="password"] {
   opacity: 0.8;
 }
 
-/* more styles for the Submit Button  */
-.submitbtn {
+.submitbutton {
   width: auto;
   border-radius: 20%;
   border-color: #f53803;
@@ -107,12 +129,11 @@ input[type="password"] {
   font-weight: 900;
   background-image: linear-gradient(315deg, #fdfbfb 0%, #ebedee 74%);
 }
-.submitbtn:hover {
+.submitbutton:hover {
   color: black;
   cursor: pointer;
 }
 
-/* Center the image and position the close button */
 .imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
@@ -131,27 +152,26 @@ img.avatar {
   background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
 }
 
-span.psw {
+span.password {
   float: right;
   padding-top: 16px;
 }
 
-/* The Modal (background) */
+/* The Modal background */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   right: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
   padding-top: 60px;
 }
 
-/* Modal Content/Box */
 .modal-content {
   background-color: #ff4e00;
   background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
@@ -164,7 +184,6 @@ span.psw {
   border-radius: 20px 20px;
 }
 
-/* The Close Button (x) */
 .close {
   position: absolute;
   right: 25px;
@@ -180,7 +199,7 @@ span.psw {
   cursor: pointer;
 }
 
-/* Add Zoom Animation */
+/*  Zoom Animation */
 .animate {
   animation: animatezoom 0.6s;
 }
@@ -218,7 +237,7 @@ span.psw {
   transform: translateY(4px);
 }
 .nav li a {
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 .nav li a:hover {
@@ -274,16 +293,17 @@ span.psw {
   display: block;
 }
 
-/* Change styles for span and Submit button on  small screens */
+/* Change styles for above parts on  small screens */
+
 @media only screen and (max-width: 800px) {
   .loginButton {
     font-size: 20px;
   }
-  span.psw {
+  span.password {
     display: block;
     float: none;
   }
-  .submitbtn {
+  .submitbutton {
     width: 100%;
   }
   .modal-content {
@@ -298,7 +318,7 @@ span.psw {
     margin: 10px;
   }
   header h4 {
-    color: #fff;
+    color: white;
     letter-spacing: 0.25em;
     line-height: 1.5;
     font-size: 20px;
@@ -338,25 +358,25 @@ section ul li a {
   margin-bottom: 1rem;
 }
 
-/* teachers styles */
+/* teachers styles as well as About us part */
 
 .teachers {
   margin-top: 6rem;
   padding-bottom: 1rem;
 }
 
-.teachers > ul {
+.teachers ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 1rem;
 }
 
-.teachers > ul > li {
-  /*border: 1px solid #e2e2e2;
-  border-radius: 0.5rem;*/
-}
+/*.teachers ul li {
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+}*/
 
-.teachers > ul > li > figure {
+.teachers ul li figure {
   height: 250px;
   overflow: hidden;
   border-top-left-radius: 0.5rem;
@@ -364,33 +384,37 @@ section ul li a {
   position: relative;
 }
 
-.teachers > ul > li > figure > img {
+.teachers ul li figure img {
   width: 100%;
   height: 100%;
   background-position: center;
 }
+.teachers ul li figure img:hover {
+  transform: scale(1.15);
+  transition: 2s;
+}
 
-.teachers > ul > li > figure > figcaption {
+.teachers ul li figure figcaption {
   position: absolute;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
 }
 
-.teachers > ul > li > figure > figcaption > h3 {
+.teachers ul li figure figcaption h3 {
   color: white;
   padding: 0.75rem;
   font-size: 1.25rem;
 }
 
-.teachers > ul > li > p {
+.teachers ul li p {
   font-size: 1rem;
   line-height: 1.5;
   padding: 1rem 0.75rem;
   color: #666666;
 }
 
-.teachers > ul > li > a {
+.teachers ul li a {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
 }
@@ -413,44 +437,112 @@ section ul li a {
   grid-gap: 0.5rem;
 }
 
-.gallery__img {
+.galleryimg {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+.galleryimg:hover {
+  transform: scale(1.1);
+  transition: 2s;
+}
 
-.gallery__item--1 {
+.galleryitem1 {
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
 }
 
-.gallery__item--2 {
+.galleryitem2 {
   grid-column: 3 / span 2;
   grid-row: 1 / span 2;
 }
 
-.gallery__item--3 {
+.galleryitem3 {
   grid-column: 5 / span 4;
   grid-row: 1 / span 5;
 }
 
-.gallery__item--4 {
+.galleryitem4 {
   grid-column: 1 / span 4;
   grid-row: 3 / span 3;
 }
 
-.gallery__item--5 {
+.galleryitem5 {
   grid-column: 1 / span 4;
   grid-row: 6 / span 3;
 }
 
-.gallery__item--6 {
+.galleryitem6 {
   grid-column: 5 / span 4;
   grid-row: 6 / span 3;
 }
 
+/* Testimonial Slider using Animation */
+#testimonials {
+  overflow: hidden;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  text-align: center;
+}
+#testimonials h1 {
+  padding-bottom: 2rem;
+}
+#testimonials .talk {
+  position: relative;
+  width: 400%;
+  margin: 0;
+  left: 0;
+  animation: 30s slider infinite;
+}
+.cards {
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card img {
+  border-radius: 45%;
+  width: 15rem;
+}
+
+.cardcontainer {
+  padding: 5px 16px;
+}
+.talk .cards {
+  float: left;
+  width: 25%;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  15% {
+    left: 0;
+  }
+
+  25% {
+    left: -100%;
+  }
+  35% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  60% {
+    left: -200%;
+  }
+  85% {
+    left: -300%;
+  }
+  100% {
+    left: -300%;
+  }
+}
+
 /* footer */
+
 footer {
   background-color: #333;
   color: white;
@@ -460,18 +552,10 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(320px, 2fr));
   padding: 3rem 1rem;
 }
-@media only screen and (max-width: 800px) {
-  footer {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .googleMap {
-    display: none;
-  }
-  .contact {
-    grid-column: 1/3;
-  }
+.googleMap img {
+  width: 15rem;
 }
+
 footer ul li a {
   font-size: 1rem;
   line-height: 2rem;
@@ -493,4 +577,15 @@ footer p {
   margin-left: 10px;
 }
 
-////////////////////////////
+@media only screen and (max-width: 800px) {
+  footer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .googleMap {
+    display: none;
+  }
+  .contact {
+    grid-column: 1/3;
+  }
+}
